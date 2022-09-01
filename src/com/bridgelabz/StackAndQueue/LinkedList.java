@@ -2,7 +2,7 @@ package com.bridgelabz.StackAndQueue;
 
 public class LinkedList {
 	/*
-	 *1.Creating node head
+	 * 1.Creating node head
 	 */
 	Node head;
 
@@ -19,24 +19,46 @@ public class LinkedList {
 	}
 
 	/*
-	 * 3.creating method to add the first value to stack
+	 * 3. creating method to add values
 	 */
 	public void addFirst(Object data) {
 		Node newNode = new Node(data);
-		if (head == null)
+		if (head == null) {
 			head = newNode;
-		else {
-			newNode.next = head;
-			head = newNode;
+			return;
+		}
+		newNode.next = head;
+		head = newNode;
+
+	}
+
+	/*
+	 * 4.created method to peak a value from stack
+	 */
+	public void peak() {
+		if (head != null) {
+			System.out.println("Peaked from stack : " + head.data);
+		} else {
+			System.out.println("No element left in the stack.");
+			return;
 		}
 	}
 
 	/*
-	 * 4.created method to diplay the linkedlist/stack
+	 * 5.method to delete peaked value
+	 */
+	public Node pop() {
+		System.out.println("Popped value is : " + head.data);
+		head = head.next;
+		return head;
+	}
+
+	/*
+	 * 6.created method to diplay the linkedlist/stack
 	 */
 	public void display() {
 		if (head == null)
-			System.out.println("No elements to display");
+			System.out.println("The Stack is empty");
 		else {
 			Node temp = head;
 			while (temp.next != null) {
