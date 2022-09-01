@@ -19,38 +19,46 @@ public class LinkedList {
 	}
 
 	/*
-	 * 3. creating method to add values
+	 * 3.creating method to add the first value to stack
 	 */
 	public void addFirst(Object data) {
 		Node newNode = new Node(data);
-		if (head == null) {
+		if (head == null)
 			head = newNode;
-			return;
-		}
-		newNode.next = head;
-		head = newNode;
-
-	}
-
-	/*
-	 * 4.created method to peak a value from stack
-	 */
-	public void peak() {
-		if (head != null) {
-			System.out.println("Peaked from stack : " + head.data);
-		} else {
-			System.out.println("No element left in the stack.");
-			return;
+		else {
+			newNode.next = head;
+			head = newNode;
 		}
 	}
 
 	/*
-	 * 5.method to delete peaked value
+	 * 4.creating method to add the last value to stack
 	 */
-	public Node pop() {
-		System.out.println("Popped value is : " + head.data);
+
+	public void addLast(Object data) {
+		Node newNode = new Node(data);
+		if (head == null)
+			head = newNode;
+		else if (head.next == null)
+			head.next = newNode;
+		else {
+			Node temp = head;
+			while (temp.next != null) {
+				temp = temp.next;
+			}
+			temp.next = newNode;
+		}
+	}
+
+	/*
+	 * 5.method to delete first value till the stack gets empty
+	 */
+	public void deleteFirst() {
+		if (head == null)
+			System.out.println("No elements present to delete");
+		else
+			System.out.println("Poping value");
 		head = head.next;
-		return head;
 	}
 
 	/*

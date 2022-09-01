@@ -3,34 +3,19 @@ package com.bridgelabz.StackAndQueue;
 public class Main {
 public static void main(String[] args) {
 		/*
-		 * 1.creating Object an Oject
+		 * 1.creating object of queue
 		 */
-		Stack stack = new Stack();
+		Queue queue = new Queue();
 		/*
-		 * 2.Calling method to push value to stack
+		 * 2.calling methord to add (first in first out)
 		 */
-		stack.push(70);
-		stack.push(30);
-		stack.push(56);
+		queue.enque(56);
+		queue.enque(30);
+		queue.enque(70);
 		/*
-		 * 3.calling method to display value of stack
+		 * 3. calling method to to display stack
 		 */
-		stack.displayStack();
-		/*
-		 * 4.peaking and poping the value till stack gets empty
-		 */
-		stack.displayPeak();
-		stack.displaypop();
-		stack.displayPeak();
-		stack.displaypop();
-		stack.displayPeak();
-		stack.displaypop();
-		stack.displayPeak();
-		stack.displayStack();
-		/*
-		 * 5.calling method to display value of stack
-		 */
-		// stack.displayStack();
+		queue.displayQueue();
 
 	}
 
