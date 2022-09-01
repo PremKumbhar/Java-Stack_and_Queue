@@ -17,6 +17,17 @@ public static void main(String[] args) {
 		 */
 		queue.displayQueue();
 
+		/*
+		 * 4.deque/deleting the top values of stack
+		 * 56(top value)
+		 * 30(second top)
+		 * 70(last value)
+		 * after deleting the stack is empty
+		 * 
+		 */
+		queue.deque();
+		queue.deque();
+		queue.deque();
+		
 	}
-
 }
